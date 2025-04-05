@@ -792,8 +792,3 @@ html {
     margin: 0 auto;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
-
-/* Remove BGM controls */
-.bgm-controls {
-    display: none;
-}

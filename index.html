@@ -164,36 +164,7 @@
             </a>
         </nav>
 
-        <!-- BGM Controls -->
-        <div class="bgm-controls">
-            <button id="bgm-toggle" class="bgm-button">
-                <span class="bgm-icon">🎵</span>
-                <span class="bgm-text">BGM</span>
-            </button>
-        </div>
-
-        <!-- Audio Element -->
-        <audio id="bgm" loop>
-            <source src="assets/bgm.mp3" type="audio/mpeg">
-        </audio>
-
         <script>
-            // BGM Controls
-            const bgm = document.getElementById('bgm');
-            const bgmToggle = document.getElementById('bgm-toggle');
-            let isBgmPlaying = false;
-
-            bgmToggle.addEventListener('click', () => {
-                if (isBgmPlaying) {
-                    bgm.pause();
-                    bgmToggle.classList.remove('active');
-                } else {
-                    bgm.play();
-                    bgmToggle.classList.add('active');
-                }
-                isBgmPlaying = !isBgmPlaying;
-            });
-
             // Smooth scroll to top
             function scrollToTop() {
                 window.scrollTo({

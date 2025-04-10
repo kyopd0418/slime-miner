@@ -335,15 +335,26 @@ body {
 
 /* News Card Styles */
 .update-content h3 {
+    font-size: 1.1rem;
     color: var(--primary-color);
-    font-size: 1.2rem;
     margin-bottom: 0.8rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    letter-spacing: 0.02em;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.update-content {
+    color: white;
+    font-size: 0.95rem;
+}
+
+.update-content h3:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1em;
+    height: 1em;
 }
 
 .update-content li {
@@ -452,10 +463,15 @@ body {
     margin-bottom: 0;
 }
 
+/* Reduce spacing specifically for nested list items within guide-list */
+.guide-list ul li {
+    margin-bottom: 0.2rem; /* Adjust this value (e.g., 0.1rem, 0) if needed */
+    padding-left: 1em; /* Optional: Adjust left padding for nested items if desired */
+}
+
 .guide-button-container {
     text-align: center;
-    margin-top: 2.5rem;
-    padding-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .guide-button {
